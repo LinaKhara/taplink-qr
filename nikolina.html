@@ -1,21 +1,37 @@
 
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Redirecting...</title>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V48D2ESPTW"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-V48D2ESPTW');
-    </script>
-    <!-- Redirect -->
-    <meta http-equiv="refresh" content="0;url=https://bistrotekazagreb.taplink.ws/p/fb77c4/?utm_source=nikolina">
-  </head>
-  <body>
-    <p>Redirecting to Taplink...</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting…</title>
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V48D2ESPTW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-V48D2ESPTW', { debug_mode: true });
+  </script>
+</head>
+<body>
+  <p>Redirecting…</p>
+
+  <script>
+    (function () {
+      const utmSource = "nikolina";
+      const target = "https://bistrotekazagreb.taplink.ws/p/fb77c4/?utm_source=" + utmSource;
+
+      gtag('event', 'qr_hit', {
+        event_category: 'qr_redirect',
+        event_label: utmSource,
+        utm_source: utmSource
+      });
+
+      setTimeout(function () {
+        window.location.href = target;
+      }, 1800);
+    })();
+  </script>
+</body>
 </html>
